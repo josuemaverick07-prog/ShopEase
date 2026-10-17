@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ShopEase</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <header class="site-header">
+      <nav class="top-nav">
+        <div class="logo">
+          <h1>ShopEase</h1>
+        </div>
+        <ul class="nav-links">
+          <li><a href="#">Home</a></li>
+          <li><a href="#products">Products</a></li>
+          <li><a href="#shoes">Shoes</a></li>
+          <li><a href="#essentials">Essentials</a></li>
+          <li><a href="#loginSection">Account</a></li>
+        </ul>
+        <div class="cart">
+          <span class="cart-count" aria-live="polite" data-cart-count>0</span>
+          <button class="cart-toggle" type="button" aria-label="Open shopping cart" aria-expanded="false" aria-controls="cartPanel">🛒</button>
+          <section id="cartPanel" class="cart-panel" aria-labelledby="cartHeading" hidden>
+            <div class="cart-panel-heading">
+              <h2 id="cartHeading">Your cart</h2>
+              <button class="cart-close" type="button" aria-label="Close shopping cart">&times;</button>
+            </div>
+            <ul class="cart-items" data-cart-items></ul>
+            <p class="cart-empty" data-cart-empty>Your cart is empty.</p>
+            <p class="cart-total">Total: <strong data-cart-total>₱0</strong></p>
+          </section>
+        </div>
+      </nav>
+    </header>
+
+    <main class="storefront">
+      <section class="hero">
+        <div class="hero-copy">
+          <p class="eyebrow">New collection</p>
+          <h2>Smart essentials for everyday life.</h2>
+          <p>Upgrade your home, work, and travel with beautifully designed essentials that make every day easier.</p>
+          <a href="#products" class="cta-button">Shop now</a>
+        </div>
+      </section>
+
+      <section id="products" class="products">
+        <div class="section-heading">
+          <p class="eyebrow">Find your everyday favorites</p>
+          <h3>Shoes &amp; essentials</h3>
+        </div>
+
+        <section id="shoes" class="product-category" aria-labelledby="shoes-heading">
+          <div class="category-heading">
+            <h4 id="shoes-heading">Shoes</h4>
+            <p>Comfortable styles for wherever the day takes you.</p>
+          </div>
+          <div class="product-grid">
+            <article class="product-card">
+              <div class="product-image shoe-one"><img src="images/everyday-sneakers.jpg" alt="White everyday sneakers"></div>
+              <div class="product-info">
+                <h4>Everyday Sneakers</h4>
+                <p>₱740</p>
+                <button type="button" data-add-to-cart>Add to cart</button>
+              </div>
+            </article>
+
+            <article class="product-card">
+              <div class="product-image shoe-two"><img src="images/classic-casual-shoes.jpg" alt="Black and white classic casual shoes"></div>
+              <div class="product-info">
+                <h4>Classic Casual Shoes</h4>
+                <p>₱920</p>
+                <button type="button" data-add-to-cart>Add to cart</button>
+              </div>
+            </article>
+
+            <article class="product-card">
+              <div class="product-image shoe-three"><img src="images/weekend-sandals.jpg" alt="Taupe buckle-strap weekend sandals"></div>
+              <div class="product-info">
+                <h4>Weekend Sandals</h4>
+                <p>₱380</p>
+                <button type="button" data-add-to-cart>Add to cart</button>
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <section id="essentials" class="product-category" aria-labelledby="essentials-heading">
+          <div class="category-heading">
+            <h4 id="essentials-heading">Everyday essentials</h4>
+            <p>Useful favorites for home, work, and travel.</p>
+          </div>
+          <div class="product-grid">
+            <article class="product-card">
+              <div class="product-image image-one"><img src="images/classic-leather-tote.jpg" alt="Black classic leather tote"></div>
+              <div class="product-info">
+                <h4>Classic Leather Tote</h4>
+                <p>₱890</p>
+                <button type="button" data-add-to-cart>Add to cart</button>
+              </div>
+            </article>
+
+            <article class="product-card">
+              <div class="product-image image-two"><img src="images/wireless-headphones.jpg" alt="Black wireless headphones"></div>
+              <div class="product-info">
+                <h4>Wireless Headphones</h4>
+                <p>₱1,290</p>
+                <button type="button" data-add-to-cart>Add to cart</button>
+              </div>
+            </article>
+
+            <article class="product-card">
+              <div class="product-image essential-one"><img src="images/reusable-water-bottle.jpg" alt="Black reusable water bottle"></div>
+              <div class="product-info">
+                <h4>Reusable Water Bottle</h4>
+                <p>₱300</p>
+                <button type="button" data-add-to-cart>Add to cart</button>
+              </div>
+            </article>
+
+            <article class="product-card">
+              <div class="product-image essential-two"><img src="images/everyday-backpack.jpg" alt="Black everyday backpack"></div>
+              <div class="product-info">
+                <h4>Everyday Backpack</h4>
+                <p>₱680</p>
+                <button type="button" data-add-to-cart>Add to cart</button>
+              </div>
+            </article>
+          </div>
+        </section>
+      </section>
+
+      <section id="loginSection" class="login-panel">
+        <div id="loginBox" class="auth-card">
+          <h2>Log in</h2>
+          <form id="loginForm">
+            <input type="email" name="email" placeholder="Email" autocomplete="email" required>
+            <input type="password" name="password" placeholder="Password" autocomplete="current-password" required>
+            <button type="submit">Log in</button>
+          </form>
+          <p>No account? <a href="#" id="showSignup">Sign up</a></p>
+        </div>
+
+        <div id="signupBox" class="auth-card" hidden>
+          <h2>Sign up</h2>
+          <form id="signupForm">
+            <input type="text" name="name" placeholder="Name" autocomplete="name" required>
+            <input type="email" name="email" placeholder="Email" autocomplete="email" required>
+            <input type="password" name="password" placeholder="Password" autocomplete="new-password" required>
+            <button type="submit">Create account</button>
+          </form>
+          <p>Already have an account? <a href="#" id="showLogin">Log in</a></p>
+        </div>
+
+        <p id="message" aria-live="polite"></p>
+        <p class="demo-note">Demo only: accounts aren't saved anywhere yet.</p>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
